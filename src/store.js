@@ -1,7 +1,7 @@
 // Get createStore, compose, and 
 // applyMiddleware(allows 3rd party middleware to improve redux) from redux
 import { createStore, compose } from 'redux';
-import rootReducer from './reducers/index';
+import rootReducers from './reducers/index';
 
 // Check for chrome -
 const enhancers = compose(
@@ -10,7 +10,7 @@ const enhancers = compose(
   window.devToolsExtension ? window.devToolsExtension() : f=> f
 )
 // createStore with rootReducer, {initial state}, enhancers(middleware, devtools extensions)
-const store = createStore(rootReducer, {}, enhancers);
+const store = createStore(rootReducers, {}, enhancers);
 
 //checking to see if hot module is present, if it is, it will run the code
 if(module.hot) {
