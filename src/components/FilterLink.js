@@ -20,7 +20,7 @@ const FilterLink = ({filter, dispatch, children}) => {
 }
 
 const mapStateToProps = (state) => {
-  return {filter: stater.filter}
+  return {filter: state.filter}
 }
 
 export default FilterLink;
