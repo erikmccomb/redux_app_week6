@@ -4,7 +4,7 @@ import { combineReducers } from 'redux';
 //import the reducers to be combined.
 import todos from './todos';
 
-const rootReducer = cobineReducers({
+const rootReducer = combineReducers({
   todos,
 });
 
