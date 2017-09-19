@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 const styles = {
-  complete: {textDecoration: 'line=through', color: 'gray' }
+  complete: {textDecoration: 'line-through', color: 'gray' }
   todo: { cursor: 'pointer'}
 }
 
