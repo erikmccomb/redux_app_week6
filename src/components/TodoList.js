@@ -9,8 +9,8 @@ const TodoList = ({ todos }) => (
   </ul>
 )
 
-const napStateToProps = (state) => {
-  return { todos: state.stodos }
+const mapStateToProps = (state) => {
+  return { todos: state.todos }
 }
 
-export default TodoList;
+export default connect(mapStateToProps)(TodoList);
