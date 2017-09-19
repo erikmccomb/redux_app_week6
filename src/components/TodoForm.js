@@ -13,8 +13,11 @@ class TodoForm extends React.Component {
     e.preventDefault();
     // Get name from input
     let name=this.state.name;
+    let {dispatch, id }= this.props;
+    let todo = {name, id, complete: false}
     // Update redux store
-    this.props.dispatch({ type: 'ADD_TODO', todo: name });
+    dispatch({ type: 'ADD_TODO', todo: name });
+    dispatch({ type: 'INC_ID' })
     // Clear input
     this.setState({name: ''})
   }
@@ -29,6 +32,10 @@ class TodoForm extends React.Component {
       </form>
     )
   }
+}
+
+const mapStateToProps = (state) => {
+  return {id: state.nextId}
 }
 
 export default connect()(TodoForm);

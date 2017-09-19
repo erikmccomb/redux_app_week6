@@ -3,9 +3,13 @@
 import { combineReducers } from 'redux';
 //import the reducers to be combined.
 import todos from './todos';
+// awlways add new reducers to import first
+import nextId from './nextId';
 
 const rootReducer = combineReducers({
   todos,
+  nextId,
+  
 });
 
 export default rootReducer;
