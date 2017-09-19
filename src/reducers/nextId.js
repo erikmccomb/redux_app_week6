@@ -6,3 +6,5 @@ const nextId = (state = 1, action) => {
       return state;
   }
 }
+
+export default nextId;

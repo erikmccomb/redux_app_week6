@@ -6,7 +6,7 @@ const styles = {
   todo: { cursor: 'pointer'}
 }
 
-const Todo = ({ id, name, complete, dispatch}) => {
+const Todo = ({ id, name, complete, dispatch}) => (
   <li
     onClick={ () => dispatch({ type: 'TOGGLE_TODO', id }) }
     // if complete true, it will combine styles.todo with styles.complete,
@@ -15,6 +15,6 @@ const Todo = ({ id, name, complete, dispatch}) => {
   >
     {name}
   </li>
-}
+)
 
 export default connect()(Todo);

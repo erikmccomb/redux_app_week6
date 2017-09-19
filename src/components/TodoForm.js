@@ -16,7 +16,7 @@ class TodoForm extends React.Component {
     let {dispatch, id }= this.props;
     let todo = {name, id, complete: false}
     // Update redux store
-    dispatch({ type: 'ADD_TODO', todo: name });
+    dispatch({ type: 'ADD_TODO', todo });
     dispatch({ type: 'INC_ID' })
     // Clear input
     this.setState({name: ''})
@@ -38,4 +38,4 @@ const mapStateToProps = (state) => {
   return {id: state.nextId}
 }
 
-export default connect()(TodoForm);
+export default connect(mapStateToProps)(TodoForm);
